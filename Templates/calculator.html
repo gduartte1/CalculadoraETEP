@@ -4,90 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora ETEP</title>
-    <style>
-        body {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
-            background-image: url("../Assets/background.jpg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            margin: 0;
-        }
-        .calculator {
-            width: 500px;
-            margin: 100px auto;
-            padding: 20px;
-            border: 2px solid #000000;
-            border-radius: 10px;
-        }
-       input[type="text"] {
-            width: 95%;
-            padding: 10px;
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            font-size: 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-            font-size: 20px;
-        }
-        .result {
-            margin-top: 20px;
-            font-size: 30px;
-            text-align: center;
-            text-decoration: underline;
-        }
-        h2{
-            font-size: 40px;
-            text-align: center;
-        }
-    </style>
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
 </head>
 <body>
     <div class="calculator">
-        <h2>CALCULADORA ETEP</h2>
+    <div class="headercontainer">
+    <img id="etep" src="../static/etep.png" alt="">
+    <h2>CALCULADORA</h2>
+    </div>
+    <div class="form">
         <input type="text" id="number_1" placeholder="Entre seu 1º número">
         <input type="text" id="operation" placeholder="Entre o operador (+, -, *, /)">
         <input type="text" id="number_2" placeholder="Entre seu 2º número">
         <button onclick="performCalculation()">Calcular</button>
-        <p class="result" id="result"></p>
     </div>
-
-    <script>
-        function performCalculation() {
-            const number_1 = document.getElementById('number_1').value;
-            const operation = document.getElementById('operation').value;
-            const number_2 = document.getElementById('number_2').value;
-
-            fetch('/calculate', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    number_1: number_1,
-                    operation: operation,
-                    number_2: number_2,
-                }),
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('result').innerText = `${number_1} ${operation} ${number_2} = ${data.result}`;
-            })
-            .catch(error => {
-                document.getElementById('result').innerText = 'Error: Invalid input';
-            });
-        }
-    </script>
+        <p class="result" id="result"></p>        
+    </div>
+    <script src="/static/script.js"></script>
 </body>
 </html>
