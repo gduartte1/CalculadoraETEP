@@ -7,7 +7,6 @@ Por favor digite a operação matematica que você deseja realizar:
 * para multiplicação
 / para divisão
 ''')
-
     number_1 = float(input('Entre o seu 1º número: '))
     number_2 = float(input('Entre o seu 2º número: '))
 
@@ -47,3 +46,4 @@ Por favor digite S para SIM e N para NÃO.
         again()
 
 calculate()
+
