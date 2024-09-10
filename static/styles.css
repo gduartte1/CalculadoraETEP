@@ -46,6 +46,9 @@ button:hover {
   font-size: 30px;
   text-align: center;
   text-decoration: underline;
+  color: #003874;
+  font-weight: bold;
+
 }
 .headercontainer{
 display: flex;
