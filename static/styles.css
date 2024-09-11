@@ -8,13 +8,108 @@ body {
   height: 100%;
 }
 .calculator {
-  width: 500px;
-  margin: 100px auto;
+  width: 80%; 
+  max-width: 500px; 
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px;
   border: 2px solid #000000;
   border-radius: 10px;
   background-color: white;
 }
+.icons {
+  width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#icon_calc {
+  width: 10%;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+  border: 3px solid #000000;
+  border-radius: 27px;
+}
+  #icon_unit {
+    width: 10%;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+#icon_coin {
+  width: 10%;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+#icon_calc:hover, #icon_unit:hover, #icon_coin:hover {
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+.hidden-text-unit {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1; /* Ensures it's above other content */
+  transition: visibility 0s, opacity 0.3s ease;
+  white-space: nowrap;
+}
+  #icon_unit:hover + .hidden-text-unit{
+    visibility: visible;
+    opacity: 1;
+  }
+  .hidden-text-calc {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1; /* Ensures it's above other content */
+    transition: visibility 0s, opacity 0.3s ease;
+    white-space: nowrap;
+  }
+  #icon_calc:hover + .hidden-text-calc{
+    visibility: visible;
+    opacity: 1;
+  }
+  .hidden-text-coin {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1; /* Ensures it's above other content */
+    transition: visibility 0s, opacity 0.3s ease;
+    white-space: nowrap;
+  }
+  #icon_coin:hover + .hidden-text-coin{
+    visibility: visible;
+    opacity: 1;
+  }
 .form{
   display: flex;
   width: 100%;
@@ -33,7 +128,6 @@ select{
   font-size: 20px;
   color: #003874;
   font-weight: bold;
-
 }
 input {
   width: 50%;
@@ -62,7 +156,6 @@ button:hover {
   text-decoration: underline;
   color: #003874;
   font-weight: bold;
-
 }
 .headercontainer{
 display: flex;
@@ -72,7 +165,7 @@ margin-bottom: 10px;
 }
 #logo{
   width: 30%;
-
+  margin-right: 10px;
 }
 h2{
   font-size: 40px;
