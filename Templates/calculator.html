@@ -16,7 +16,7 @@
         <img id="icon_coin" src="../static/icon_coin.png" alt="Coin Converter Icon">
         <div class="hidden-text-coin">Selecionar conversor moedas</div>
     </div>
-    <div class="calculator">
+    <div class="calculator" id="calculator">
     <div class="headercontainer">
     <img id="logo" src="../static/icon_calc.png" alt="">
     <h2>CALCULADORA</h2>
@@ -33,8 +33,48 @@
         <input type="number" id="number_2" placeholder="Entre seu 2º número">
         <button onclick="performCalculation()">Calcular</button>
     </div>
-    <p class="result" id="result"></p>        
+    <p class="result" id="result"></p>
+    </div>
+    </div>
+    <div class="unit-conversor" id="unit-conversor">
+<div class="headercontainer">
+<img id="logo" src="../static/icon_unit.png" alt="">
+<h2>CONVERSOR DE UNIDADE DE MEDIDA</h2>
 </div>
+<div class="form">
+    <input type="number" id="number_1" placeholder="Entre seu 1º número">
+    <label for="operation">Selecione o tipo de cálculo</label>
+    <select id="operation" name="operation" placeholder="Entre a unidade de medida">
+        <option value="+">Adição</option>
+        <option value="-">Subtração</option>
+        <option value="*">Multiplicação</option>
+        <option value="/">Divisão</option>
+    </select>
+    <input type="number" id="number_2" placeholder="Entre seu 2º número">
+    <button onclick="performCalculation()">Calcular</button>
+</div>
+<p class="result" id="result"></p>
+    </div>
+    </div>
+    <div class="coin-conversor" id="coin-conversor">
+<div class="headercontainer">
+<img id="logo" src="../static/icon_coin.png" alt="">
+<h2>CONVERSOR DE MOEDAS</h2>
+</div>
+<div class="form">
+<input type="number" id="number_1" placeholder="Entre seu 1º número">
+<label for="operation">Selecione o tipo de cálculo</label>
+<select id="operation" name="operation" placeholder="Entre a unidade de medida">
+    <option value="+">Adição</option>
+    <option value="-">Subtração</option>
+    <option value="*">Multiplicação</option>
+    <option value="/">Divisão</option>
+</select>
+<input type="number" id="number_2" placeholder="Entre seu 2º número">
+<button onclick="performCalculation()">Calcular</button>
+</div>
+<p class="result" id="result"></p>
+    </div>
     <script src="/static/script.js"></script>
 </body>
 </html>

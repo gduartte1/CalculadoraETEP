@@ -22,3 +22,60 @@ function performCalculation() {
         document.getElementById('result').innerText = 'Error: Invalid input';
     });
 }
+document.getElementById("icon_unit").addEventListener("click", function() {
+        const calculator = document.getElementById("calculator");
+        const unitConversor = document.getElementById("unit-conversor")
+        const coinConversor = document.getElementById("coin-conversor")
+        const unitIcon = document.getElementById("icon_unit")
+        const coinIcon = document.getElementById("icon_coin")
+        const calcIcon = document.getElementById("icon_calc")
+        unitIcon.style.border = "3px solid #000000";
+        coinIcon.style.border = "0px solid #000000";
+        calcIcon.style.border = "0px solid #000000";
+        if (unitConversor.style.display == "block") {
+            calculator.style.display = "none"
+            coinConversor.style.display = "none"
+        } else {    
+            unitConversor.style.display = "block";
+            calculator.style.display = "none"
+            coinConversor.style.display = "none";
+        };
+})
+document.getElementById("icon_calc").addEventListener("click", function() {
+    const calculator = document.getElementById("calculator");
+    const unitConversor = document.getElementById("unit-conversor")
+    const coinConversor = document.getElementById("coin-conversor")
+    const unitIcon = document.getElementById("icon_unit")
+    const coinIcon = document.getElementById("icon_coin")
+    const calcIcon = document.getElementById("icon_calc")
+    unitIcon.style.border = "0px solid #000000";
+    coinIcon.style.border = "0px solid #000000";
+    calcIcon.style.border = "3px solid #000000";
+    if (calculator.style.display == "block") {
+        unitConversor.style.display = "none"
+        coinConversor.style.display = "none"
+    } else {    
+        calculator.style.display = "block";
+        unitConversor.style.display = "none"
+        coinConversor.style.display = "none";
+    };
+})
+document.getElementById("icon_coin").addEventListener("click", function() {
+    const calculator = document.getElementById("calculator");
+    const unitConversor = document.getElementById("unit-conversor")
+    const coinConversor = document.getElementById("coin-conversor")
+    const unitIcon = document.getElementById("icon_unit")
+    const coinIcon = document.getElementById("icon_coin")
+    const calcIcon = document.getElementById("icon_calc")
+    unitIcon.style.border = "0px solid #000000";
+    coinIcon.style.border = "3px solid #000000";
+    calcIcon.style.border = "0px solid #000000";
+    if (coinConversor.style.display == "block") {
+        unitConversor.style.display = "none"
+        calculator.style.display = "none"
+    } else {    
+        coinConversor.style.display = "block";
+        unitConversor.style.display = "none"
+        calculator.style.display = "none";
+    };
+})
