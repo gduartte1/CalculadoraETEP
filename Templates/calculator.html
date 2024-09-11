@@ -15,7 +15,13 @@
     </div>
     <div class="form">
         <input type="number" id="number_1" placeholder="Entre seu 1º número">
-        <input type="text" id="operation" placeholder="Entre o operador (+, -, *, /)">
+        <label for="operation">Selecione o tipo de cálculo</label>
+        <select id="operation" name="operation" placeholder="Entre o operador (+, -, *, /)">
+            <option value="+">Adição</option>
+            <option value="-">Subtração</option>
+            <option value="*">Multiplicação</option>
+            <option value="/">Divisão</option>
+        </select>
         <input type="number" id="number_2" placeholder="Entre seu 2º número">
         <button onclick="performCalculation()">Calcular</button>
     </div>
