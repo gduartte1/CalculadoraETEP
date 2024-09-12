@@ -42,18 +42,35 @@
 <h2>CONVERSOR DE UNIDADE DE MEDIDA</h2>
 </div>
 <div class="form">
-    <input type="number" id="number_1" placeholder="Entre seu 1º número">
-    <label for="operation">Selecione o tipo de cálculo</label>
-    <select id="operation" name="operation" placeholder="Entre a unidade de medida">
-        <option value="+">Adição</option>
-        <option value="-">Subtração</option>
-        <option value="*">Multiplicação</option>
-        <option value="/">Divisão</option>
+    <label for="conversionType">Selecione o tipo de unidade que deseja converter</label>
+    <select id="conversionType" name="conversionType" placeholder="Entre a unidade de medida">
+        <option value="peso">Peso</option>
+        <option value="distancia">Distância</option>
+        <option value="velocidade">Velocidade</option>
+        <option value="area">Área</option>
+        <option value="volume">Volume</option>
     </select>
-    <input type="number" id="number_2" placeholder="Entre seu 2º número">
-    <button onclick="performCalculation()">Calcular</button>
+    <label for="unit1">Selecione a unidade de medida de entrada</label>
+    <select id="unit1" name="unit1" placeholder="Entre a unidade de medida">
+        <option value="g">g (grama)</option>
+        <option value="kg">kg (kilograma)</option>
+        <option value="ton">ton (tonelada)</option>
+        <option value="lbs">lbs (Libras)</option>
+        <option value="oz">oz (Onças)</option>
+    </select>
+    <label for="unit1">Selecione o valor inicial da unidade de medida</label>
+    <input type="number" id="unitvalue_1" placeholder="Valor inicial">
+    <label for="unit2">Selecione a unidade de medida de saída</label>
+    <select id="unit2" name="unit2" placeholder="Entre a unidade de medida">
+        <option value="g">g (grama)</option>
+        <option value="kg">kg (kilograma)</option>
+        <option value="ton">ton (tonelada)</option>
+        <option value="lbs">lbs (Libras)</option>
+        <option value="oz">oz (Onças)</option>
+    </select>    
+    <button onclick="UnitConversion()">Converter</button>
 </div>
-<p class="result" id="result"></p>
+<p class="result" id="unitResult"></p>
     </div>
     </div>
     <div class="coin-conversor" id="coin-conversor">
