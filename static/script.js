@@ -135,49 +135,94 @@ document.getElementById('conversionType').addEventListener('change', function() 
         ];
     } else if (conversionType == 'velocidade') {
         unit1options = [
-            { value: 'carrot', text: 'Sexo Anal' },
-            { value: 'broccoli', text: 'Broccoli' },
-            { value: 'spinach', text: 'Spinach' }
+            { value: 'm/s', text: 'm/s (Metros por Segundo)' },
+            { value: 'km/h', text: 'km/h (Kilometro por Hora)' },
+            { value: 'mi/s', text: 'mi/s (Milhas por Segundo)' },
+            { value: 'mi/h', text: 'mi/h (Milhas por Hora)' },
+            { value: 'ft/s', text: 'ft/s (Pés por segundo)' },
+            { value: 'ft/h', text: 'ft/h (Pés por Hora)' },
+            { value: 'yd/s', text: 'ft/s (Jardas por segundo)' },
+            { value: 'yd/h', text: 'ft/h (Jardas por Hora)' }
         ];
         unit2options = [
-            { value: 'carrot', text: 'Carrot' },
-            { value: 'broccoli', text: 'Broccoli' },
-            { value: 'spinach', text: 'Spinach' }  
+            { value: 'm/s', text: 'm/s (Metros por Segundo)' },
+            { value: 'km/h', text: 'km/h (Kilometro por Hora)' },
+            { value: 'mi/s', text: 'mi/s (Milhas por Segundo)' },
+            { value: 'mi/h', text: 'mi/h (Milhas por Hora)' },
+            { value: 'ft/s', text: 'ft/s (Pés por segundo)' },
+            { value: 'ft/h', text: 'ft/h (Pés por Hora)' },
+            { value: 'yd/s', text: 'ft/s (Jardas por segundo)' },
+            { value: 'yd/h', text: 'ft/h (Jardas por Hora)' }
         ];
     } else if (conversionType == 'volume') {
         unit1options = [
-            { value: 'carrot', text: 'Carrot' },
-            { value: 'broccoli', text: 'Broccoli' },
-            { value: 'spinach', text: 'Spinach' }
+            { value: 'mL', text: 'mL (Mililitro)' },
+            { value: 'L', text: 'L (Litro)' },
+            { value: 'm³', text: 'm³ (Metro cúbico)' },
+            { value: 'km³', text: 'km³ (Kilometro cúbico)' },
+            { value: 'cm³', text: 'cm³ (Centímetro cúbico)' },
+            { value: 'gal', text: 'gal (Galão - EUA)' }
         ];
         unit2options = [
-            { value: 'carrot', text: 'Carrot' },
-            { value: 'broccoli', text: 'Broccoli' },
-            { value: 'spinach', text: 'Spinach' }  
+            { value: 'mL', text: 'mL (Mililitro)' },
+            { value: 'L', text: 'L (Litro)' },
+            { value: 'm³', text: 'm³ (Metro cúbico)' },
+            { value: 'km³', text: 'km³ (Kilometro cúbico)' },
+            { value: 'cm³', text: 'cm³ (Centímetro cúbico)' },
+            { value: 'gal', text: 'gal (Galão - EUA)' }
         ];
     } else if (conversionType == 'area') {
         unit1options = [
-            { value: 'carrot', text: 'Carrot' },
-            { value: 'broccoli', text: 'Broccoli' },
-            { value: 'spinach', text: 'Spinach' }
+            { value: 'cm²', text: 'cm² (Centímetro Quadrado)' },
+            { value: 'm²', text: 'm² (Metro Quadrado)' },
+            { value: 'km²', text: 'km² (Kilometro Quadrado)' },
+            { value: 'ha', text: 'ha (Hectare)' },
+            { value: 'ac', text: 'ac (Acre)' },
         ];
         unit2options = [
-            { value: 'carrot', text: 'Carrot' },
-            { value: 'broccoli', text: 'Broccoli' },
-            { value: 'spinach', text: 'Spinach' }  
+            { value: 'cm²', text: 'cm² (Centímetro Quadrado)' },
+            { value: 'm²', text: 'm² (Metro Quadrado)' },
+            { value: 'km²', text: 'km² (Kilometro Quadrado)' },
+            { value: 'ha', text: 'ha (Hectare)' },
+            { value: 'ac', text: 'ac (Acre)' },
         ];
     } else if (conversionType == 'distancia') {
         unit1options = [
-            { value: 'carrot', text: 'Carrot' },
-            { value: 'broccoli', text: 'Broccoli' },
-            { value: 'spinach', text: 'Spinach' }
+            { value: 'cm', text: 'cm (Centímetro)' },
+            { value: 'm', text: 'm (Metro)' },
+            { value: 'km', text: 'km (Kilometro)' },
+            { value: 'yd', text: 'ys (Jarda)' },
+            { value: 'ft', text: 'ft (Pés)' },
+            { value: 'in', text: 'in (Polegadas)' }
         ];
         unit2options = [
-            { value: 'carrot', text: 'Carrot' },
-            { value: 'broccoli', text: 'Broccoli' },
-            { value: 'spinach', text: 'Spinach' }  
+            { value: 'cm', text: 'cm (Centímetro)' },
+            { value: 'm', text: 'm (Metro)' },
+            { value: 'km', text: 'km (Kilometro)' },
+            { value: 'yd', text: 'ys (Jarda)' },
+            { value: 'ft', text: 'ft (Pés)' },
+            { value: 'in', text: 'in (Polegadas)' }
         ];
     }
+    else if (conversionType == 'temperatura') {
+        unit1options = [
+            { value: 'K', text: 'K (Kelvin)' },
+            { value: '°C', text: '°C (Celsius)' },
+            { value: '°F', text: '°F (Fahrenheit)' },
+            { value: '°R', text: '°R (Rankine)' },
+            { value: 'ft', text: 'ft (Pés)' },
+            { value: 'in', text: 'in (Polegadas)' }
+        ];
+        unit2options = [
+            { value: 'cm', text: 'cm (Centímetro)' },
+            { value: 'm', text: 'm (Metro)' },
+            { value: 'km', text: 'km (Kilometro)' },
+            { value: 'yd', text: 'ys (Jarda)' },
+            { value: 'ft', text: 'ft (Pés)' },
+            { value: 'in', text: 'in (Polegadas)' }
+        ];
+    }
+    
 
     // Populate the second select with new options
     unit1options.forEach(option  => {
