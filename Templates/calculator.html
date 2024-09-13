@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora ETEP</title>
@@ -80,15 +83,25 @@
 <h2>CONVERSOR DE MOEDAS</h2>
 </div>
 <div class="form">
-<input type="number" id="number_1" placeholder="Entre seu 1º número">
-<label for="operation">Selecione o tipo de cálculo</label>
-<select id="operation" name="operation" placeholder="Entre a unidade de medida">
-    <option value="+">Adição</option>
-    <option value="-">Subtração</option>
-    <option value="*">Multiplicação</option>
-    <option value="/">Divisão</option>
+<label for="coin1">Selecione a moeda de entrada</label>
+<select id="coin1" name="coin1">
+    <option value="R$">R$ (Real Brasileiro)</option>
+    <option value="U$D">U$D (Dolar Americano)</option>
+    <option value="€">€ (Euro)</option>
+    <option value="£">£ (Libra esterlina)</option>
+    <option value="¥">¥ (Iene Japonês)</option>
+    <option value="BTC">BTC (BitCoin)</option>
 </select>
-<input type="number" id="number_2" placeholder="Entre seu 2º número">
+<input type="coinvalue1" id="coinvalue1" placeholder="Valor da moeda de entrada">
+<label for="coin2">Selecione a moeda de saída</label>
+<select id="coin2" name="coin2">
+    <option value="R$">R$ (Real Brasileiro)</option>
+    <option value="U$D">U$D (Dolar Americano)</option>
+    <option value="€">€ (Euro)</option>
+    <option value="£">£ (Libra esterlina)</option>
+    <option value="¥">¥ (Iene Japonês)</option>
+    <option value="BTC">BTC (BitCoin)</option>
+</select>
 <button onclick="performCalculation()">Calcular</button>
 </div>
 <p class="result" id="result"></p>

@@ -141,8 +141,8 @@ document.getElementById('conversionType').addEventListener('change', function() 
             { value: 'mi/h', text: 'mi/h (Milhas por Hora)' },
             { value: 'ft/s', text: 'ft/s (Pés por segundo)' },
             { value: 'ft/h', text: 'ft/h (Pés por Hora)' },
-            { value: 'yd/s', text: 'ft/s (Jardas por segundo)' },
-            { value: 'yd/h', text: 'ft/h (Jardas por Hora)' }
+            { value: 'yd/s', text: 'yd/s (Jardas por segundo)' },
+            { value: 'yd/h', text: 'yd/h (Jardas por Hora)' }
         ];
         unit2options = [
             { value: 'm/s', text: 'm/s (Metros por Segundo)' },
@@ -151,8 +151,8 @@ document.getElementById('conversionType').addEventListener('change', function() 
             { value: 'mi/h', text: 'mi/h (Milhas por Hora)' },
             { value: 'ft/s', text: 'ft/s (Pés por segundo)' },
             { value: 'ft/h', text: 'ft/h (Pés por Hora)' },
-            { value: 'yd/s', text: 'ft/s (Jardas por segundo)' },
-            { value: 'yd/h', text: 'ft/h (Jardas por Hora)' }
+            { value: 'yd/s', text: 'yd/s (Jardas por segundo)' },
+            { value: 'yd/h', text: 'yd/h (Jardas por Hora)' }
         ];
     } else if (conversionType == 'volume') {
         unit1options = [
@@ -177,14 +177,14 @@ document.getElementById('conversionType').addEventListener('change', function() 
             { value: 'm²', text: 'm² (Metro Quadrado)' },
             { value: 'km²', text: 'km² (Kilometro Quadrado)' },
             { value: 'ha', text: 'ha (Hectare)' },
-            { value: 'ac', text: 'ac (Acre)' },
+            { value: 'ac', text: 'ac (Acre)' }
         ];
         unit2options = [
             { value: 'cm²', text: 'cm² (Centímetro Quadrado)' },
             { value: 'm²', text: 'm² (Metro Quadrado)' },
             { value: 'km²', text: 'km² (Kilometro Quadrado)' },
             { value: 'ha', text: 'ha (Hectare)' },
-            { value: 'ac', text: 'ac (Acre)' },
+            { value: 'ac', text: 'ac (Acre)' }
         ];
     } else if (conversionType == 'distancia') {
         unit1options = [
@@ -209,17 +209,13 @@ document.getElementById('conversionType').addEventListener('change', function() 
             { value: 'K', text: 'K (Kelvin)' },
             { value: '°C', text: '°C (Celsius)' },
             { value: '°F', text: '°F (Fahrenheit)' },
-            { value: '°R', text: '°R (Rankine)' },
-            { value: 'ft', text: 'ft (Pés)' },
-            { value: 'in', text: 'in (Polegadas)' }
+            { value: '°R', text: '°R (Rankine)' }
         ];
         unit2options = [
-            { value: 'cm', text: 'cm (Centímetro)' },
-            { value: 'm', text: 'm (Metro)' },
-            { value: 'km', text: 'km (Kilometro)' },
-            { value: 'yd', text: 'ys (Jarda)' },
-            { value: 'ft', text: 'ft (Pés)' },
-            { value: 'in', text: 'in (Polegadas)' }
+            { value: 'K', text: 'K (Kelvin)' },
+            { value: '°C', text: '°C (Celsius)' },
+            { value: '°F', text: '°F (Fahrenheit)' },
+            { value: '°R', text: '°R (Rankine)' }
         ];
     }
     
