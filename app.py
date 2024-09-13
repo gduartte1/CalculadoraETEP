@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, render_template
+import requests
 
 app = Flask(__name__)
 
@@ -42,11 +43,7 @@ def handle_calculation():
     return jsonify(result=str(result))
 
 # Função que realizará a conversão de unidade de medida
-def unitConversion(unit1, unit2, unitvalue_1):
-    print(f'unit1: {unit1}')
-    print(f'unit2: {unit2}')
-    print(f'unitvalue_1: {unitvalue_1}')
-    
+def unitConversion(unit1, unit2, unitvalue_1): 
     try:
         unitvalue_1 = float(unitvalue_1)
         
@@ -423,7 +420,6 @@ def unitConversion(unit1, unit2, unitvalue_1):
     except ValueError:
         return "Erro: Entrada inválida. Por favor forneça números."
     
-
 #Rota para manipular o calculo
 @app.route('/unitConversion', methods=['POST'])
 def handle_conversion():
@@ -436,6 +432,89 @@ def handle_conversion():
     unitResult = unitConversion(unit1, unit2, unitvalue_1)
     
     return jsonify(unitResult=str(unitResult))
+
+
+import requests
+
+def get_currency_value(base_currency='USD', target_currencies=['bitcoin', 'BRL', 'EUR', 'JPY', 'GBP']):
+    try:
+        # URL to fetch the exchange rates
+        url = 'https://www.exchangerate-api.com/v6/latest/USD'
+        response = requests.get(url)
+        response.raise_for_status()  # Raises an exception for HTTP errors
+        data = response.json()
+        
+        # Extract the rates from the response
+        rates = data.get('rates', {})
+        
+        # Initialize a dictionary to store the values
+        values = {}
+        
+        for currency in target_currencies:
+            if currency == 'bitcoin':
+                # Fetch cryptocurrency values from CoinGecko or similar API
+                btc_url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd'
+                btc_response = requests.get(btc_url)
+                btc_response.raise_for_status()
+                btc_data = btc_response.json()
+                values['bitcoin'] = btc_data['bitcoin']['usd']
+            else:
+                # For fiat currencies
+                value = rates.get(currency.upper(), 'Currency not found')
+                values[currency] = value
+                
+        return values
+    except Exception as e:
+        print(f"Error fetching currency values: {str(e)}", flush=True)
+        return None
+
+def coin_conversion(coin1, coin2, coinvalue_1): 
+    try:
+        # Ensure coinvalue_1 is a valid number
+        try:
+            coinvalue_1 = float(coinvalue_1)
+        except ValueError:
+            return "Error: Invalid input for coin value. Please provide a valid number."
+        
+        # Fetch currency values
+        currency_values = get_currency_value(base_currency='USD', target_currencies=[coin1, coin2])
+        
+        if not currency_values:
+            return "Error: Currency values could not be fetched."
+        
+        # Check if coin1 and coin2 values are present
+        if coin1 == 'bitcoin':
+            coin1_value = currency_values.get('bitcoin')
+        else:
+            coin1_value = currency_values.get(coin1.upper())
+        
+        if coin2 == 'bitcoin':
+            coin2_value = currency_values.get('bitcoin')
+        else:
+            coin2_value = currency_values.get(coin2.upper())
+        
+        if coin1_value is None or coin2_value is None:
+            return "Error: One or both of the currencies are not available in the API response."
+        
+        # Convert coinvalue_1 from coin1 to USD, then from USD to coin2
+        value_in_usd = coinvalue_1 / coin1_value
+        converted_value = value_in_usd * coin2_value
+        
+        return round(converted_value, 2)
+    except Exception as e:
+        return f"Error: {str(e)}"
+
+@app.route('/coin_conversion', methods=['POST'])
+def handle_coin_conversion():
+    data = request.get_json()
+    
+    coin1 = data.get('coin1')
+    coin2 = data.get('coin2')
+    coinvalue_1 = data.get('coinvalue_1')
+    
+    coinResult = coin_conversion(coin1, coin2, coinvalue_1)
+    
+    return jsonify(coinResult=str(coinResult))
 
 
 if __name__ == '__main__':

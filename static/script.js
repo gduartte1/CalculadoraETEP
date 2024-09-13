@@ -234,3 +234,28 @@ document.getElementById('conversionType').addEventListener('change', function() 
         unit2.appendChild(newOption2);
     });
 });
+
+function coinConvertion() {
+    const coin1 = document.getElementById('coin1').value;
+    const coinvalue_1 = document.getElementById('coinvalue_1').value;
+    const coin2 = document.getElementById('coin2').value;
+
+    fetch('/coin_conversion', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            coin1: coin1,
+            coinvalue_1: coinvalue_1,
+            coin2: coin2,
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('coinResult').innerText = `${coinvalue_1}${coin1} é o equivalente à ${data.coinResult}${coin2}`;
+    })
+    .catch(error => {
+        document.getElementById('coinResult').innerText = 'Error: Invalid input';
+    });
+}

@@ -85,26 +85,26 @@
 <div class="form">
 <label for="coin1">Selecione a moeda de entrada</label>
 <select id="coin1" name="coin1">
-    <option value="R$">R$ (Real Brasileiro)</option>
-    <option value="U$D">U$D (Dolar Americano)</option>
+    <option value="BRL">R$ (Real Brasileiro)</option>
+    <option value="USD">U$D (Dolar Americano)</option>
     <option value="€">€ (Euro)</option>
     <option value="£">£ (Libra esterlina)</option>
     <option value="¥">¥ (Iene Japonês)</option>
     <option value="BTC">BTC (BitCoin)</option>
 </select>
-<input type="coinvalue1" id="coinvalue1" placeholder="Valor da moeda de entrada">
+<input type="coinvalue_1" id="coinvalue_1" placeholder="Valor da moeda de entrada">
 <label for="coin2">Selecione a moeda de saída</label>
 <select id="coin2" name="coin2">
-    <option value="R$">R$ (Real Brasileiro)</option>
-    <option value="U$D">U$D (Dolar Americano)</option>
+    <option value="BRL">R$ (Real Brasileiro)</option>
+    <option value="USD">U$D (Dolar Americano)</option>
     <option value="€">€ (Euro)</option>
     <option value="£">£ (Libra esterlina)</option>
     <option value="¥">¥ (Iene Japonês)</option>
     <option value="BTC">BTC (BitCoin)</option>
 </select>
-<button onclick="performCalculation()">Calcular</button>
+<button onclick="coinConvertion()">Converter</button>
 </div>
-<p class="result" id="result"></p>
+<p class="result" id="coinResult"></p>
     </div>
     <script src="/static/script.js"></script>
 </body>
