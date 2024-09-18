@@ -47,7 +47,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
     try:
         unitvalue_1 = float(unitvalue_1)
         
-        # Dictionary to store conversions from 'g' to other units
+        # Dicionário para armazenar as conversões de 'g' para outras unidades
         g_conversions = {
             'kg': unitvalue_1 / 1000,
             'g': unitvalue_1,
@@ -56,7 +56,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'oz': unitvalue_1 / 28.34952
         }
         
-        # Dictionary to store conversions from 'kg' to other units
+        # Dicionário para armazenar as conversões de 'kg' para outras unidades
         kg_conversions = {
             'g': unitvalue_1 * 1000,
             'ton': unitvalue_1 / 1000,
@@ -65,7 +65,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'kg': unitvalue_1
         }
         
-        # Dictionary to store conversions from 'ton' to other units
+        # Dicionário para armazenar as conversões de 'ton' para outras unidades
         ton_conversions = {
             'g': unitvalue_1 * 1000000,
             'kg': unitvalue_1 * 1000,
@@ -74,7 +74,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'ton': unitvalue_1
         }
         
-        # Dictionary to store conversions from 'lbs' to other units
+        # Dicionário para armazenar as conversões de 'lbs' para outras unidades
         lbs_conversions = {
             'g': unitvalue_1 * 453.592,
             'ton': unitvalue_1 / 2204.6,
@@ -83,7 +83,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'lbs': unitvalue_1
         }
         
-        # Dictionary to store conversions from 'oz' to other units
+        # Dicionário para armazenar as conversões de 'oz' para outras unidades
         oz_conversions = {
             'g': unitvalue_1 * 28.34952,
             'ton': unitvalue_1 / 35273.96,
@@ -91,6 +91,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'lbs': unitvalue_1 / 16,
             'oz': unitvalue_1
         }
+        # Dicionário para armazenar as conversões de 'm/s' para outras unidades
         m_s_conversions = {
             'm/s': unitvalue_1,
             'km/h': unitvalue_1 * 3.6,
@@ -102,7 +103,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'yd/h': unitvalue_1 * 3937.00787
         }
 
-        # Dictionary to store conversions from 'km/h' to other units
+        # Dicionário para armazenar as conversões de 'km/h' para outras unidades
         km_h_conversions = {
             'km/h': unitvalue_1,
             'm/s': unitvalue_1 / 3.6,
@@ -114,7 +115,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'yd/h': unitvalue_1 * 1093.61
         }
 
-        # Dictionary to store conversions from 'mi/s' to other units
+        # Dicionário para armazenar as conversões de 'mi/s' para outras unidades
         mi_s_conversions = {
             'mi/s': unitvalue_1,
             'm/s': unitvalue_1 * 1609.34,
@@ -126,7 +127,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'yd/h': unitvalue_1 * 6336000
         }
 
-        # Dictionary to store conversions from 'mi/h' to other units (identical to 'mi/s')
+        # Dicionário para armazenar as conversões de 'mi/h' para outras unidades
         mi_h_conversions = {
             'mi/h': unitvalue_1,
             'm/s': unitvalue_1 / 2.23694,
@@ -138,7 +139,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'yd/h': unitvalue_1 * 1760
         }
 
-        # Dictionary to store conversions from 'ft/s' to other units
+        # Dicionário para armazenar as conversões de 'ft/s' para outras unidades
         ft_s_conversions = {
             'ft/s': unitvalue_1,
             'm/s': unitvalue_1 / 3.28084,
@@ -150,7 +151,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'yd/h': unitvalue_1 * 1200
         }
 
-        # Dictionary to store conversions from 'ft/h' to other units
+        # Dicionário para armazenar as conversões de 'ft/h' para outras unidades
         ft_h_conversions = {
             'ft/h': unitvalue_1,
             'm/s': unitvalue_1 / 11811.02,
@@ -162,7 +163,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'yd/h': unitvalue_1 / 3
         }
 
-        # Dictionary to store conversions from 'yd/s' to other units
+        # Dicionário para armazenar as conversões de 'yd/s' para outras unidades
         yd_s_conversions = {
             'yd/s': unitvalue_1,
             'm/s': unitvalue_1 / 1.09361,
@@ -174,7 +175,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'yd/h': unitvalue_1 * 3600
         }
 
-        # Dictionary to store conversions from 'yd/h' to other units
+        # Dicionário para armazenar as conversões de 'yd/h' para outras unidades
         yd_h_conversions = {
             'yd/h': unitvalue_1,
             'm/s': unitvalue_1 / 3937.00787,
@@ -185,7 +186,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'ft/h': unitvalue_1 * 3,
             'yd/s': unitvalue_1 / 3600
         }
-        # Dictionary to store conversions from 'mL' to other units
+        # Dicionário para armazenar as conversões de 'mL' para outras unidades
         mL_conversions = {
             'mL': unitvalue_1,
             'L': unitvalue_1 / 1000,
@@ -195,7 +196,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'gal': unitvalue_1 / 3785.41
         }
 
-        # Dictionary to store conversions from 'L' to other units
+        # Dicionário para armazenar as conversões de 'L' para outras unidades
         L_conversions = {
             'mL': unitvalue_1 * 1000,
             'L': unitvalue_1,
@@ -205,7 +206,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'gal': unitvalue_1 / 3.78541
         }
 
-        # Dictionary to store conversions from 'm³' to other units
+        # Dicionário para armazenar as conversões de 'm³' para outras unidades
         m3_conversions = {
             'mL': unitvalue_1 * 1e6,
             'L': unitvalue_1 * 1000,
@@ -215,7 +216,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'gal': unitvalue_1 * 264.172
         }
 
-        # Dictionary to store conversions from 'km³' to other units
+        # Dicionário para armazenar as conversões de 'km³' para outras unidades
         km3_conversions = {
             'mL': unitvalue_1 * 1e15,
             'L': unitvalue_1 * 1e12,
@@ -225,7 +226,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'gal': unitvalue_1 * 2.64172e11
         }
 
-        # Dictionary to store conversions from 'cm³' to other units
+        # Dicionário para armazenar as conversões de 'cm³' para outras unidades
         cm3_conversions = {
             'mL': unitvalue_1,
             'L': unitvalue_1 / 1000,
@@ -235,7 +236,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'gal': unitvalue_1 / 3785.41
         }
 
-        # Dictionary to store conversions from 'gal' to other units
+        # Dicionário para armazenar as conversões de 'gal' para outras unidades
         gal_conversions = {
             'mL': unitvalue_1 * 3785.41,
             'L': unitvalue_1 * 3.78541,
@@ -244,7 +245,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'cm³': unitvalue_1 * 3785.41,
             'gal': unitvalue_1
         }
-        # Dictionary to store conversions from 'cm²' to other units
+        # Dicionário para armazenar as conversões de 'cm²' para outras unidades
         cm2_conversions = {
             'cm²': unitvalue_1,
             'm²': unitvalue_1 / 10000,
@@ -253,7 +254,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'ac': unitvalue_1 / 40468564.224
         }
 
-        # Dictionary to store conversions from 'm²' to other units
+        # Dicionário para armazenar as conversões de 'm²' para outras unidades
         m2_conversions = {
             'cm²': unitvalue_1 * 10000,
             'm²': unitvalue_1,
@@ -262,7 +263,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'ac': unitvalue_1 / 4046.856
         }
 
-        # Dictionary to store conversions from 'km²' to other units
+        # Dicionário para armazenar as conversões de 'km²' para outras unidades
         km2_conversions = {
             'cm²': unitvalue_1 * 1e10,
             'm²': unitvalue_1 * 1e6,
@@ -271,7 +272,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'ac': unitvalue_1 * 247.105
         }
 
-        # Dictionary to store conversions from 'ha' (hectares) to other units
+        # Dicionário para armazenar as conversões de 'ha' (hectares) para outras unidades
         ha_conversions = {
             'cm²': unitvalue_1 * 1e8,
             'm²': unitvalue_1 * 10000,
@@ -280,7 +281,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'ac': unitvalue_1 * 2.47105
         }
 
-        # Dictionary to store conversions from 'ac' (acres) to other units
+        # Dicionário para armazenar as conversões de 'ac' (acres) para outras unidades
         ac_conversions = {
             'cm²': unitvalue_1 * 40468564.224,
             'm²': unitvalue_1 * 4046.856,
@@ -288,7 +289,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'ha': unitvalue_1 / 2.47105,
             'ac': unitvalue_1
         }
-        # Dictionary to store conversions from 'cm' to other units
+        # Dicionário para armazenar as conversões de 'cm' para outras unidades
         cm_conversions = {
             'cm': unitvalue_1,
             'm': unitvalue_1 / 100,
@@ -298,7 +299,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'in': unitvalue_1 / 2.54
         }
 
-        # Dictionary to store conversions from 'm' to other units
+        # Dicionário para armazenar as conversões de 'm' para outras unidades
         m_conversions = {
             'cm': unitvalue_1 * 100,
             'm': unitvalue_1,
@@ -308,7 +309,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'in': unitvalue_1 * 39.3701
         }
 
-        # Dictionary to store conversions from 'km' to other units
+        # Dicionário para armazenar as conversões de 'km' para outras unidades
         km_conversions = {
             'cm': unitvalue_1 * 100000,
             'm': unitvalue_1 * 1000,
@@ -318,7 +319,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'in': unitvalue_1 * 39370.1
         }
 
-        # Dictionary to store conversions from 'yd' to other units
+        # Dicionário para armazenar as conversões de 'yd' para outras unidades
         yd_conversions = {
             'cm': unitvalue_1 * 91.44,
             'm': unitvalue_1 / 1.09361,
@@ -328,7 +329,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'in': unitvalue_1 * 36
         }
 
-        # Dictionary to store conversions from 'ft' to other units
+        # Dicionário para armazenar as conversões de 'ft' para outras unidades
         ft_conversions = {
             'cm': unitvalue_1 * 30.48,
             'm': unitvalue_1 / 3.28084,
@@ -338,7 +339,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'in': unitvalue_1 * 12
         }
 
-        # Dictionary to store conversions from 'in' to other units
+        # Dicionário para armazenar as conversões de 'in' para outras unidades
         in_conversions = {
             'cm': unitvalue_1 * 2.54,
             'm': unitvalue_1 / 39.3701,
@@ -347,35 +348,35 @@ def unitConversion(unit1, unit2, unitvalue_1):
             'ft': unitvalue_1 / 12,
             'in': unitvalue_1
         }
-        # Dictionary to store conversions from 'K' (Kelvin) to other units
+        # Dicionário para armazenar as conversões de 'K' (Kelvin) para outras unidades
         K_conversions = {
             'K': unitvalue_1,
             '°C': unitvalue_1 - 273.15,
             '°F': (unitvalue_1 - 273.15) * 9/5 + 32,
             '°R': unitvalue_1 * 1.8
         }
-        # Dictionary to store conversions from '°C' (Celsius) to other units
+        # Dicionário para armazenar as conversões de '°C' (Celsius) para outras unidades
         C_conversions = {
             'K': unitvalue_1 + 273.15,
             '°C': unitvalue_1,
             '°F': unitvalue_1 * 9/5 + 32,
             '°R': (unitvalue_1 + 273.15) * 1.8
         }
-        # Dictionary to store conversions from '°F' (Fahrenheit) to other units
+        # Dicionário para armazenar as conversões de '°F' (Fahrenheit) para outras unidades
         F_conversions = {
             'K': (unitvalue_1 - 32) * 5/9 + 273.15,
             '°C': (unitvalue_1 - 32) * 5/9,
             '°F': unitvalue_1,
             '°R': unitvalue_1 + 459.67
         }
-        # Dictionary to store conversions from '°R' (Rankine) to other units
+        # Dicionário para armazenar as conversões de '°R' (Rankine) para outras unidades
         R_conversions = {
             'K': unitvalue_1 / 1.8,
             '°C': (unitvalue_1 - 491.67) * 5/9,
             '°F': unitvalue_1 - 459.67,
             '°R': unitvalue_1
         }
-        # Dictionary for unit conversion maps
+        # Dicionário para mapeamento de conversão de unidades
         conversion_map = {
             'g': g_conversions,
             'kg': kg_conversions,
@@ -413,7 +414,7 @@ def unitConversion(unit1, unit2, unitvalue_1):
             '°R': R_conversions
         }
     
-        # Perform the conversion using the map
+        # Realiza a conversão utilizando o mapeamento
         unitResult = conversion_map.get(unit1, {}).get(unit2, "Erro: Conversão inválida.")
         
         return round((unitResult),10)
@@ -436,71 +437,65 @@ def handle_conversion():
 
 import requests
 
-def get_currency_value(base_currency='USD', target_currencies=['bitcoin', 'BRL', 'EUR', 'JPY', 'GBP']):
+#Em desenvolvimento
+
+def get_currency_value(base_currency='BTC', target_currencies=['BTC', 'BRL', 'EUR', 'JPY', 'GBP','USD']):
     try:
-        # URL to fetch the exchange rates
-        url = 'https://www.exchangerate-api.com/v6/latest/USD'
+        # URL para busca das taxas de conversão para USD
+        #url = 'https://api.exchangerate-api.com/v4/latest/USD'
+                # URL para busca das taxas de conversão para BTC
+        url = 'https://api.coinbase.com/v2/exchange-rates?currency=BTC'
         response = requests.get(url)
-        response.raise_for_status()  # Raises an exception for HTTP errors
         data = response.json()
         
-        # Extract the rates from the response
-        rates = data.get('rates', {})
+        # Extraí os rates das moedas da API
+        rates = data.get('data', {}).get('rates', {})
         
-        # Initialize a dictionary to store the values
+        # Inicializa o dicionário para armazenar os valores
         values = {}
         
         for currency in target_currencies:
-            if currency == 'bitcoin':
-                # Fetch cryptocurrency values from CoinGecko or similar API
-                btc_url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd'
-                btc_response = requests.get(btc_url)
-                btc_response.raise_for_status()
-                btc_data = btc_response.json()
-                values['bitcoin'] = btc_data['bitcoin']['usd']
-            else:
-                # For fiat currencies
-                value = rates.get(currency.upper(), 'Currency not found')
+                value = rates.get(currency.upper(), 'Moeda não encontrada')
                 values[currency] = value
                 
         return values
     except Exception as e:
-        print(f"Error fetching currency values: {str(e)}", flush=True)
+        print(f"Erro na busca dos valores de moeda: {str(e)}", flush=True)
         return None
 
 def coin_conversion(coin1, coin2, coinvalue_1): 
+    print(f"coinvalue_1 (before conversion): {coinvalue_1}")
     try:
-        # Ensure coinvalue_1 is a valid number
+        # Garante que coinvalue_1 é um número válido
         try:
             coinvalue_1 = float(coinvalue_1)
         except ValueError:
-            return "Error: Invalid input for coin value. Please provide a valid number."
+            return "Erro: Entrada inválida para o valor da moeda. Por favor forneça um número válido."
         
-        # Fetch currency values
-        currency_values = get_currency_value(base_currency='USD', target_currencies=[coin1, coin2])
+        # Busca os valores de moeda
+        currency_values = get_currency_value(base_currency='BTC', target_currencies=[coin1, coin2])
         
         if not currency_values:
-            return "Error: Currency values could not be fetched."
+            return "Erro: Valores de moeda não puderam ser buscados."
         
-        # Check if coin1 and coin2 values are present
-        if coin1 == 'bitcoin':
-            coin1_value = currency_values.get('bitcoin')
-        else:
-            coin1_value = currency_values.get(coin1.upper())
-        
-        if coin2 == 'bitcoin':
-            coin2_value = currency_values.get('bitcoin')
-        else:
-            coin2_value = currency_values.get(coin2.upper())
+        # Checa se os valores de coin1 e coin2 existem
+        coin1_value = currency_values.get(coin1.upper())
+        coin2_value = currency_values.get(coin2.upper())
         
         if coin1_value is None or coin2_value is None:
-            return "Error: One or both of the currencies are not available in the API response."
+            return "Erro: Uma ou ambas moedas não estão disponíveis na resposta da API."
         
-        # Convert coinvalue_1 from coin1 to USD, then from USD to coin2
+        print(f"coin1_value (before cleaning): {coin1_value}")
+        print(f"coin2_value (before cleaning): {coin2_value}")
+        
+        coin1_value = float(coin1_value.replace(",", "").strip()) if isinstance(coin1_value, str) else float(coin1_value)
+        coin2_value = float(coin2_value.replace(",", "").strip()) if isinstance(coin2_value, str) else float(coin2_value)
+        
+        # Converte o coinvalue_1 de coin1 para BTC e então de BTC para coin2
         value_in_usd = coinvalue_1 / coin1_value
         converted_value = value_in_usd * coin2_value
         
-        return round(converted_value, 2)
+        return round(converted_value, 4)
     except Exception as e:
         return f"Error: {str(e)}"
 
