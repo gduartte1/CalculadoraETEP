@@ -1,7 +1,7 @@
 body {
   font-family: "SUSE", sans-serif;
   background-image: url("./background2.jpg");
-  background-size: 211px;
+  background-size: 350px;
 }
 .calculator {
   width: 80%; 
@@ -10,9 +10,9 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
-  border: 2px solid #000000;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: #e6e9ee;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   display: block;
 }
 .unit-conversor {
@@ -22,9 +22,9 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
-  border: 2px solid #000000;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: #e6e9ee;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   display: none;
 }
 .coin-conversor {
@@ -34,9 +34,9 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
-  border: 2px solid #000000;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: #e6e9ee;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   display: none;
 }
 .history {
@@ -46,9 +46,9 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
-  border: 2px solid #000000;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: #e6e9ee;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   display: none;
 }
 .icons {
@@ -56,30 +56,38 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   padding: 10px;
-  border: 2px solid #000000;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: #e6e9ee;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  display: none;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: relative;
 }
-#icon_history, #icon_coin, #icon_unit  {
+#icon_history, #icon_coin, #icon_unit {
   width: 70px;
-  transition: transform 0.3s ease;
-  border: 0px solid #000000;
-  border-radius: 50px;
+  height: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 #icon_calc{
   width: 70px;
-  transition: transform 0.3s ease;
+  height: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 3px solid #000000;
-  border-radius: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  cursor: pointer;
 }
 #icon_calc:hover, #icon_unit:hover, #icon_coin:hover,#icon_history:hover {
   transform: scale(1.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
 .hidden-text-unit {
@@ -282,9 +290,13 @@ width: 100%;
 #logo{
   width: 170px;
   margin-right: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 h2{
   font-size: 40px;
   text-align: center;
   color: #324a5e;
+  padding: 10px;
+  letter-spacing: 1.5px;
 }
