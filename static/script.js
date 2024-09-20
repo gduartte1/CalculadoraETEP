@@ -1,3 +1,4 @@
+//Função para realizar o cálculo no click do botão
 function performCalculation() {
     const number_1 = document.getElementById('number_1').value;
     const operation = document.getElementById('operation').value;
@@ -22,64 +23,104 @@ function performCalculation() {
         document.getElementById('result').innerText = 'Error: Invalid input';
     });
 }
+//Função para alterar os lay-outs com o click nos ícones e alterar o estilo do selecionado adicionando borda
 document.getElementById("icon_unit").addEventListener("click", function() {
         const calculator = document.getElementById("calculator");
         const unitConversor = document.getElementById("unit-conversor")
         const coinConversor = document.getElementById("coin-conversor")
+        const history = document.getElementById("history")
         const unitIcon = document.getElementById("icon_unit")
         const coinIcon = document.getElementById("icon_coin")
         const calcIcon = document.getElementById("icon_calc")
+        const historyIcon = document.getElementById("icon_history")
         unitIcon.style.border = "3px solid #000000";
         coinIcon.style.border = "0px solid #000000";
         calcIcon.style.border = "0px solid #000000";
+        historyIcon.style.border = "0px solid #000000";
         if (unitConversor.style.display == "block") {
             calculator.style.display = "none"
             coinConversor.style.display = "none"
+            history.style.display = "none"
         } else {    
             unitConversor.style.display = "block";
             calculator.style.display = "none"
             coinConversor.style.display = "none";
+            history.style.display = "none"
         };
 })
 document.getElementById("icon_calc").addEventListener("click", function() {
     const calculator = document.getElementById("calculator");
     const unitConversor = document.getElementById("unit-conversor")
     const coinConversor = document.getElementById("coin-conversor")
+    const history = document.getElementById("history")
     const unitIcon = document.getElementById("icon_unit")
     const coinIcon = document.getElementById("icon_coin")
     const calcIcon = document.getElementById("icon_calc")
+    const historyIcon = document.getElementById("icon_history")
     unitIcon.style.border = "0px solid #000000";
     coinIcon.style.border = "0px solid #000000";
     calcIcon.style.border = "3px solid #000000";
+    historyIcon.style.border = "0px solid #000000";
     if (calculator.style.display == "block") {
         unitConversor.style.display = "none"
         coinConversor.style.display = "none"
+        history.style.display = "none"
     } else {    
         calculator.style.display = "block";
         unitConversor.style.display = "none"
         coinConversor.style.display = "none";
+        history.style.display = "none"
     };
 })
 document.getElementById("icon_coin").addEventListener("click", function() {
     const calculator = document.getElementById("calculator");
     const unitConversor = document.getElementById("unit-conversor")
     const coinConversor = document.getElementById("coin-conversor")
+    const history = document.getElementById("history")
     const unitIcon = document.getElementById("icon_unit")
     const coinIcon = document.getElementById("icon_coin")
     const calcIcon = document.getElementById("icon_calc")
+    const historyIcon = document.getElementById("icon_history")
     unitIcon.style.border = "0px solid #000000";
     coinIcon.style.border = "3px solid #000000";
     calcIcon.style.border = "0px solid #000000";
+    historyIcon.style.border = "0px solid #000000";
     if (coinConversor.style.display == "block") {
         unitConversor.style.display = "none"
         calculator.style.display = "none"
+        history.style.display = "none"
     } else {    
         coinConversor.style.display = "block";
         unitConversor.style.display = "none"
         calculator.style.display = "none";
+        history.style.display = "none"
     };
 })
-
+document.getElementById("icon_history").addEventListener("click", function() {
+    const calculator = document.getElementById("calculator");
+    const unitConversor = document.getElementById("unit-conversor")
+    const coinConversor = document.getElementById("coin-conversor")
+    const history = document.getElementById("history")
+    const unitIcon = document.getElementById("icon_unit")
+    const coinIcon = document.getElementById("icon_coin")
+    const calcIcon = document.getElementById("icon_calc")
+    const historyIcon = document.getElementById("icon_history")
+    unitIcon.style.border = "0px solid #000000";
+    coinIcon.style.border = "0px solid #000000";
+    calcIcon.style.border = "0px solid #000000";
+    historyIcon.style.border = "3px solid #000000";
+    if (history.style.display == "block") {
+        unitConversor.style.display = "none"
+        calculator.style.display = "none"
+        coinConversor.style.display = "none"
+    } else {    
+        history.style.display = "block";
+        unitConversor.style.display = "none"
+        calculator.style.display = "none";
+        coinConversor.style.display = "none"
+    };
+})
+//Função para realizar a conversão de unidade de medida no click do botão
 function UnitConversion() {
     const unit1 = document.getElementById('unit1').value;
     const unit2 = document.getElementById('unit2').value;
@@ -102,20 +143,21 @@ function UnitConversion() {
         document.getElementById('unitResult').innerText = `${unitvalue_1}${unit1} é o equivalente à ${data.unitResult}${unit2}`;
     })
     .catch(error => {
-        document.getElementById('unitResult').innerText = 'Error: Invalid input';
+        document.getElementById('unitResult').innerText = 'Erro: Entrada inválida';
     });
 }
 
+//Função para trocar as unidades de medidas da seleção de acordo com o tipo de seleção selecionado
 document.getElementById('conversionType').addEventListener('change', function() {
     const conversionType = this.value;
     const unit1 = document.getElementById('unit1');
     const unit2 = document.getElementById('unit2');
     
-    // Clear the existing options in the second select
+    // Limpa as opções de seleção para preenchimento de acordo com o tipo selecionado
     unit1.innerHTML = '';
     unit2.innerHTML = '';
     
-    // Define options based on the selected value of the first select
+    // Define as opções de selação das unidades de medida com base na seleção do tipo de conversão
     let unit1options = [];
     let unit2options = [];
     if (conversionType == 'peso') {
@@ -220,7 +262,7 @@ document.getElementById('conversionType').addEventListener('change', function() 
     }
     
 
-    // Populate the second select with new options
+    // Altera as opções dos dropdowns de acordo com o tipo de conversão selecionadop
     unit1options.forEach(option  => {
         const newOption1 = document.createElement('option');
         newOption1.value = option.value;
@@ -235,6 +277,7 @@ document.getElementById('conversionType').addEventListener('change', function() 
     });
 });
 
+//Função para realizar a conversão de moeda no click do botão
 function coinConvertion() {
     const coin1 = document.getElementById('coin1').value;
     const coinvalue_1 = document.getElementById('coinvalue_1').value;

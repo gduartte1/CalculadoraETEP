@@ -1,7 +1,7 @@
 body {
   font-family: "SUSE", sans-serif;
   background-image: url("./background2.jpg");
-  background-size: 400px;
+  background-size: 211px;
 }
 .calculator {
   width: 80%; 
@@ -39,6 +39,18 @@ body {
   background-color: #e6e9ee;
   display: none;
 }
+.history {
+  width: 80%; 
+  max-width: 500px; 
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  background-color: #e6e9ee;
+  display: none;
+}
 .icons {
   width: 520px;
   margin-left: auto;
@@ -54,25 +66,19 @@ body {
   justify-content: space-around;
   position: relative;
 }
-#icon_calc {
-  width: 70px;
-  transition: transform 0.3s ease;
-  border: 3px solid #000000;
-  border-radius: 50px;
-}
-#icon_unit {
-    width: 70px;
-    transition: transform 0.3s ease;
-    border: 0px solid #000000;
-    border-radius: 50px;
-}
-#icon_coin {
+#icon_history, #icon_coin, #icon_unit  {
   width: 70px;
   transition: transform 0.3s ease;
   border: 0px solid #000000;
   border-radius: 50px;
 }
-#icon_calc:hover, #icon_unit:hover, #icon_coin:hover {
+#icon_calc{
+  width: 70px;
+  transition: transform 0.3s ease;
+  border: 3px solid #000000;
+  border-radius: 50px;
+}
+#icon_calc:hover, #icon_unit:hover, #icon_coin:hover,#icon_history:hover {
   transform: scale(1.3);
   transition: transform 0.3s ease;
 }
@@ -81,7 +87,7 @@ body {
   opacity: 0;
   position: absolute;
   bottom: -30px;
-  left: 50%;
+  left: 40%;
   transform: translateX(-50%);
   background-color: black;
   color: #e6e9ee;
@@ -100,7 +106,7 @@ body {
     opacity: 0;
     position: absolute;
     bottom: -30px;
-    left: 18%;
+    left: 14%;
     transform: translateX(-50%);
     background-color: black;
     color: #e6e9ee;
@@ -119,7 +125,7 @@ body {
     opacity: 0;
     position: absolute;
     bottom: -30px;
-    left: 80%;
+    left: 62%;
     transform: translateX(-50%);
     background-color: black;
     color: #e6e9ee;
@@ -130,6 +136,25 @@ body {
     white-space: nowrap;
   }
   #icon_coin:hover + .hidden-text-coin{
+    visibility: visible;
+    opacity: 1;
+  }
+  .hidden-text-history {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: -30px;
+    left: 86%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: #e6e9ee;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1; /* Ensures it's above other content */
+    transition: visibility 0s, opacity 0.3s ease;
+    white-space: nowrap;
+  }
+  #icon_history:hover + .hidden-text-history{
     visibility: visible;
     opacity: 1;
   }
